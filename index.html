@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+
+<!-- Page Design by JunkJumper https://github.com/JunkJumper -->
+
+<html lang="fr">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <title>Noxi</title>
+    <meta name="description" content="Page avec formulaire pour Wallpaper Francoponies 2020" />
+    <meta name="author" content="JunkJumper" />
+    <!-- Bootstrap core CSS -->
+    <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet" />
+    <!-- Additional CSS Files -->
+    <link href="https://fonts.googleapis.com/css?family=Lato:100,300,400,700,900" rel="stylesheet" />
+    <link rel="stylesheet" href="assets/css/tooplate-style.css" />
+    <link rel="stylesheet" href="assets/css/fontawesome.css" />
+    <link rel="stylesheet" href="assets/css/slider.css"/>
+    <link rel="stylesheet" href="./assets/css/owl.carousel.css">
+    <link rel="stylesheet" href="./assets/css/owl.theme.default.min.css">
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="./src/img/favicon.png" />
+</head>
+
+<body>
+    <div id="page-wraper">
+        <!-- Sidebar Menu -->
+        <div class="responsive-nav">
+            <i class="fa fa-bars" id="menu-toggle"></i>
+            <div id="menu" class="menu">
+                <i class="fa fa-times" id="menu-close"></i>
+                <div class="container">
+                    <div class="image">
+                        <a href="index.html"><img src="./src/img/logo.png" alt="Logo Noxi" id="logo" class="zoom" /></a>
+                    </div>
+                    <div class="author-content">
+                    </div>
+                    <nav class="main-nav">
+                        <ul class="main-menu">
+                            <li class="active"><a href="index.html">Accueil</a></li>
+                            <li><a href="#">Peluches</a></li>
+                            <li><a href="#">Dessins</a></li>
+                            <li><a href="#">Animations</a></li>
+                            <li><a href="#">Autres </a></li>
+                            <li><a href="#">Stock</a></li>
+                            <li><a href="#">Faq</a></li>
+                        </ul>
+                    </nav>
+                </div>
+            </div>
+            <img src="src/img/banner.png" alt="Noxi Banner" />
+            <section class="section about-me" data-section="section1">
+                <div class="container">
+                    <div class="section-heading">
+                        <h2 id="titre">Titre Principal</h2>
+                        <div class="line-dec"></div>
+                        <span>Lorem ipsum dolor sit amet consectetur adipisicing elit. Atque quos, error voluptate voluptatum aut recusandae velit sint commodi doloremque nulla fuga ad magnam iure! Dicta doloribus maxime ut dolores quam!</span>
+                        <div class="owl-carousel" id="carousel-index">
+                            <div><img src="src/img/carroussel/1.png" alt="1"/></div>
+                            <div><img src="src/img/carroussel/2.png" alt="2"/></div>
+                            <div><img src="src/img/carroussel/3.png" alt="3"/></div>
+                            <div><img src="src/img/carroussel/4.png" alt="4"/></div>
+                        </div>
+                        
+                    </div>
+                </div>
+            </section>
+        </div>
+        <!-- Scripts -->
+        <!-- Bootstrap core JavaScript -->
+        <script src="vendor/jquery/jquery.min.js"></script>
+        <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+        <script src="assets/js/isotope.min.js"></script>
+        <script src="assets/js/owl.carousel.js"></script>
+        <script src="assets/js/lightbox.js"></script>
+        <script src="assets/js/custom.js"></script>
+        <script>
+            //according to loftblog tut
+            $(".main-menu li:first").addClass("active");
+
+            var showSection = function showSection(section, isAnimate) {
+                var direction = section.replace(/#/, ""),
+                    reqSection = $(".section").filter(
+                        '[data-section="' + direction + '"]'
+                    ),
+                    reqSectionPos = reqSection.offset().top - 0;
+
+                if (isAnimate) {
+                    $("body, html").animate({
+                            scrollTop: reqSectionPos
+                        },
+                        800
+                    );
+                } else {
+                    $("body, html").scrollTop(reqSectionPos);
+                }
+            };
+
+            var checkSection = function checkSection() {
+                $(".section").each(function() {
+                    var $this = $(this),
+                        topEdge = $this.offset().top - 80,
+                        bottomEdge = topEdge + $this.height(),
+                        wScroll = $(window).scrollTop();
+                    if (topEdge < wScroll && bottomEdge > wScroll) {
+                        var currentId = $this.data("section"),
+                            reqLink = $("a").filter("[href*=\\#" + currentId + "]");
+                        reqLink
+                            .closest("li")
+                            .addClass("active")
+                            .siblings()
+                            .removeClass("active");
+                    }
+                });
+            };
+
+            $(".main-menu").on("click", "a", function(e) {
+                e.preventDefault();
+                showSection($(this).attr("href"), true);
+            });
+
+            $(window).scroll(function() {
+                checkSection();
+            });
+        </script>
+        <script src="assets/js/owl.carousel.min.js"></script>
+        <script src="assets/js/my.js"></script>
+    </div>
+</body>
+
+</html>
+	
+	
