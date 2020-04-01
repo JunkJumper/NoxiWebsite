@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+
+<!-- Page Design by JunkJumper https://github.com/JunkJumper -->
+
+<html lang="fr">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <title>Noxi</title>
+    <meta name="description" content="Site internet de Noxi" />
+    <meta name="author" content="JunkJumper" />
+    <!-- Bootstrap core CSS -->
+    <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet" />
+    <!-- Additional CSS Files -->
+    <link href="https://fonts.googleapis.com/css?family=Lato:100,300,400,700,900" rel="stylesheet" />
+    <link rel="stylesheet" href="assets/css/tooplate-style.css" />
+    <link rel="stylesheet" href="assets/css/fontawesome.css" />
+    <link rel="stylesheet" href="assets/css/slider.css"/>
+    <link rel="stylesheet" href="./assets/css/owl.carousel.css">
+    <link rel="stylesheet" href="./assets/css/owl.theme.default.min.css">
+    <link rel="stylesheet" href="/fancybox/jquery.fancybox-1.3.4.css" type="text/css" media="screen" />
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="./src/img/favicon.png" />
+</head>
+
+<body>
+    <div id="page-wraper">
+        <!-- Sidebar Menu -->
+        <div class="responsive-nav">
+            <i class="fa fa-bars" id="menu-toggle"></i>
+            <div id="menu" class="menu">
+                <i class="fa fa-times" id="menu-close"></i>
+                <div class="container">
+                    <div class="image">
+                        <a href="index.html"><img src="./src/img/logo.png" alt="Logo Noxi" id="logo" class="zoom" /></a>
+                    </div>
+                    <div class="author-content">
+                    </div>
+                    <nav class="main-nav">
+                        <ul>
+                            <li><a href="index.html">Accueil</a></li>
+                            <li class="active"><a href="peluche.html">Peluches</a></li>
+                            <li><a href="dessin.html">Dessins</a></li>
+                            <li><a href="animation.html">Animations</a></li>
+                            <li><a href="autre.html">Autres </a></li>
+                            <li><a href="stock.html">Stock</a></li>
+                            <li><a href="faq.html">Faq</a></li>
+                        </ul>
+                    </nav>
+                </div>
+            </div>
+            <img src="src/img/banner.png" alt="Noxi Banner" />
+            <section class="section about-me" data-section="section1">
+                <div class="container">
+                    <!-- DEBUT CONTENU A MODIF-->
+                    <div class="section-heading">
+                        <h2 id="titre">Peluches</h2>
+                        <div class="line-dec"></div>
+                        <!--TEXTE A MODIF-->
+                        <span>Lorem ipsum dolor sit amet consectetur adipisicing elit. Atque quos, error voluptate voluptatum aut recusandae velit sint commodi doloremque nulla fuga ad magnam iure! Dicta doloribus maxime ut dolores quam!</span><br /><br />
+                        <div class="container" id="mid"> <!--Boutons-->
+                            <button class="btn btn-primary" onclick="">Tous les produits</button>
+                            <button class="btn btn-success" onclick="">Produits Sur Commande</button>
+                            <button class="btn btn-info" onclick="">Produits En stock</button>
+                        </div>
+                        <br /><br />
+                        <!--DEBUT IMAGES-->
+                                <div class="container">
+                                    <div class="row">
+                                        <div class="col-md-4">
+                                            <div class="service-item">
+                                                <h4 class="mid">peluche1</h4>
+                                                    <a href="src/img/peluche/1.jpg"><img src="src/img/peluche/1.jpg" alt="peluche 1" class="zoomI" /></a><br />
+                                                    <h5 class="desc">Description</h5>
+                                                    <h6 class="prix">00,00 €</h6>
+                                            </div>
+                                        </div>
+
+
+                                        <div class="col-md-4">
+                                            <div class="service-item">
+                                                <h4 class="mid">peluche2</h4>
+                                                    <img src="src/img/peluche/2.jpg" alt="peluche 2" class="zoomI" /><br />
+                                                    <h5 class="desc">Description</h5>
+                                                    <h6 class="prix">00,00 €</h6>
+                                            </div>
+                                        </div>
+
+
+                                        <div class="col-md-4">
+                                            <div class="service-item">
+                                                <h4 class="mid">peluche3</h4>
+                                                    <img src="src/img/peluche/3.png" alt="peluche 3" class="zoomI" /><br />
+                                                    <h5 class="desc">Description</h5>
+                                                    <h6 class="prix">00,00 €</h6>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                        <!--FIN IMAGES -->
+                    </div>
+                    <!-- FIN CONTENU A MODIF-->
+                </div>
+            </section>
+        </div>
+        <!-- Scripts -->
+        <!-- Bootstrap core JavaScript -->
+        <script src="vendor/jquery/jquery.min.js"></script>
+        <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+        <script src="assets/js/isotope.min.js"></script>
+        <script src="assets/js/owl.carousel.js"></script>
+        <script src="assets/js/lightbox.js"></script>
+        <script src="assets/js/custom.js"></script>
+        <script src="assets/js/my.js"></script>
+        <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.4/jquery.min.js"></script>
+        <script src="/fancybox/jquery.fancybox-1.3.4.pack.js"></script>
+        <script src="/fancybox/jquery.mousewheel-3.0.4.pack.js"></script>
+        <script>
+            //according to loftblog tut
+            $(".main-menu li:first").addClass("active");
+
+            var showSection = function showSection(section, isAnimate) {
+                var direction = section.replace(/#/, ""),
+                    reqSection = $(".section").filter(
+                        '[data-section="' + direction + '"]'
+                    ),
+                    reqSectionPos = reqSection.offset().top - 0;
+
+                if (isAnimate) {
+                    $("body, html").animate({
+                            scrollTop: reqSectionPos
+                        },
+                        800
+                    );
+                } else {
+                    $("body, html").scrollTop(reqSectionPos);
+                }
+            };
+
+            var checkSection = function checkSection() {
+                $(".section").each(function() {
+                    var $this = $(this),
+                        topEdge = $this.offset().top - 80,
+                        bottomEdge = topEdge + $this.height(),
+                        wScroll = $(window).scrollTop();
+                    if (topEdge < wScroll && bottomEdge > wScroll) {
+                        var currentId = $this.data("section"),
+                            reqLink = $("a").filter("[href*=\\#" + currentId + "]");
+                        reqLink
+                            .closest("li")
+                            .addClass("active")
+                            .siblings()
+                            .removeClass("active");
+                    }
+                });
+            };
+
+            $(".main-menu").on("click", "a", function(e) {
+                e.preventDefault();
+                showSection($(this).attr("href"), true);
+            });
+
+            $(window).scroll(function() {
+                checkSection();
+            });
+        </script>
+        <script src="assets/js/owl.carousel.min.js"></script>
+        <script src="assets/js/my.js"></script>
+    </div>
+</body>
+
+</html>
+	
+	

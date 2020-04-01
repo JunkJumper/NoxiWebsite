@@ -32,6 +32,17 @@ img.zoom:hover {
     /* (150% zoom - Note: if the zoom is too large, it will go outside of the viewport) */
 }
 
+img.zoomI {
+    transition: transform .2s;
+    /* Animation */
+    margin: 0 auto;
+}
+
+img.zoomI:hover {
+    transform: scale(1.1);
+    /* (150% zoom - Note: if the zoom is too large, it will go outside of the viewport) */
+}
+
 input,
 select,
 textarea {
@@ -57,8 +68,32 @@ p {
 h4 {
     font-size: 28px;
     font-weight: 700;
-    color: #fff;
+    color: #9440D5;
     letter-spacing: 0.5px;
+}
+
+h4.mid {
+    font-size: 28px;
+    font-weight: 700;
+    color: #9e58d3;
+    letter-spacing: 0.5px;
+    text-align: center;
+}
+
+h5.desc {
+    font-size: 24px;
+    font-weight: 700;
+    color: #af6be2;
+    letter-spacing: 0.5px;
+    text-align: center;
+}
+
+h6.prix {
+    font-size: 20px;
+    font-weight: 700;
+    color: #af6be2;
+    letter-spacing: 0.5px;
+    text-align: center;
 }
 
 img {
@@ -140,8 +175,8 @@ em {
 
 .main-nav li:hover a,
 .main-nav li.active a {
-    background: #fff;
-    color: #EED9FF;
+    background: rgb(255, 255, 255);
+    color: #CB86FF;
 }
 
 
@@ -440,7 +475,6 @@ button:hover {
 
 .service-item {
     margin-bottom: 10px;
-    padding: 50px;
     background-color: rgba(250, 250, 250, 0.1);
     transition: all 0.5s;
 }
@@ -846,4 +880,8 @@ section.contact-me {
     .isotope-toolbar {
         margin-bottom: 20px;
     }
+}
+
+#mid {
+    text-align: center;
 }
