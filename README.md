@@ -8,4 +8,4 @@ Les slider proviennent de Owl Carousel pour une intégrations d'images, de secti
 
 Ce repo est disponible sous GNU GPL 3.0.
 
-[https://junkjumper.github.io/NoxiWebsite/](https://junkjumper.github.io/NoxiWebsite/)
+[lien](https://PomPomDevEntertainment.github.io/NoxiWebsite/)
